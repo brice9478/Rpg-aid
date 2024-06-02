@@ -1,0 +1,12 @@
+=================================================================================
+
+USAGE
+        ./rpg_aid [name of the file with the informations]
+
+DESCRIPTION
+        Quickly determines who's turn it is. Please create a file in which
+        there is, in the same order :
+[Name of the player] [Physical speed] [Perception speed] [Thinking speed]
+        A little precision, at level 1, the 2 speed stats should be around 100
+
+=================================================================================

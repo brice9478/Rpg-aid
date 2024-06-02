@@ -1,0 +1,42 @@
+=================================================================================
+
+For effects :
+[type][value][%?][stat][duration][target]
+
+-type : is a - or a + -> determine if buff or debuff
+-value : an int
+-%? : if value is a percentage
+-stat : stat* targeted
+-duration : in turn
+-target : player targeted
+
+*all stats:
+pv      =    PV
+atk     =    ATTACK
+def     =    DEFENSE
+sta     =    STAMINA
+physpd  =    PHYSICAL_SPEED
+mag     =    MAGICAL_POWER
+mana    =    MANA
+perspd  =    PERCEPTION_SPEED
+int     =    INTELLIGENCE
+mental  =    MENTAL
+thispd  =    THINKING_SPEED
+water   =    WATER
+fire    =    FIRE
+earth   =    EARTH
+wind    =    WIND
+elec    =    ELECTRICITY
+plant   =    PLANT
+light   =    LIGHT
+dark    =    DARKNESS
+
+examples:
+-20%deft2p1
++100atkt1p3
++100atkt1p3 -20%deft2p1
+
+subtilities:
+t0 means it will be removed at the end of this turn.
+
+=================================================================================

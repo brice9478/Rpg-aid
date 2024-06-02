@@ -1,0 +1,1 @@
+pv atk def sta physpd mag mana perspd int mental thispd water fire earth wind elec plant light dark

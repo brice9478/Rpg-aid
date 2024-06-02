@@ -11,6 +11,10 @@ void end_of_turn(effect_t *effect, player_t **ptr_s, int saved_id)
 {
     effect_t *travel;
     char **array = my_str_to_word_array(read_list_stat_complete());
+    char *statistics[20] = {"PV\t\t", "ATTACK\t\t", "DEFENSE\t\t", "STAMINA\t\t", "PHYSICAL SPEED\t",
+    "MAGICAL POWER\t", "MANA\t\t", "PERCEPTION SPEED", "INTELLIGENCE\t", "MENTAL\t\t",
+    "THINKING SPEED\t", "WATER\t\t", "FIRE\t\t", "EARTH\t\t", "WIND\t\t", "ELECTRICITY\t",
+    "PLANT\t\t", "LIGHT\t\t", "DARKNESS\t", NULL};
 
     printf("End of turn:\n");
     for (travel = effect; travel != NULL; travel = travel->next) {

@@ -40,9 +40,9 @@ void effect_executioner(effect_t *effect, player_t **ptr_s)
         printf(": %d -> ", ptr_s[travel->target - 1]->current_stat[travel->stat_hit]);
         if (travel->percent == true) {
             if (travel->type == BUFF)
-                ptr_s[travel->target - 1]->current_stat[travel->stat_hit] = (int)((float)ptr_s[travel->target - 1]->current_stat[travel->stat_hit] * (float)ptr_s[travel->target - 1]->base_stat[travel->stat_hit] / 100);
+                ptr_s[travel->target - 1]->current_stat[travel->stat_hit] = (int)((float)ptr_s[travel->target - 1]->current_stat[travel->stat_hit] + (float)((travel->value * ptr_s[travel->target - 1]->base_stat[travel->stat_hit]) / 100));
             if (travel->type == DEBUFF)
-                ptr_s[travel->target - 1]->current_stat[travel->stat_hit] = (int)((float)ptr_s[travel->target - 1]->current_stat[travel->stat_hit] * (float)(100 + ptr_s[travel->target - 1]->base_stat[travel->stat_hit]) / 100);
+                ptr_s[travel->target - 1]->current_stat[travel->stat_hit] = (int)((float)ptr_s[travel->target - 1]->current_stat[travel->stat_hit] - (float)(((100 + travel->value) * ptr_s[travel->target - 1]->base_stat[travel->stat_hit]) / 100));
         } else
             ptr_s[travel->target - 1]->current_stat[travel->stat_hit] += travel->value;
         printf("%d\n", ptr_s[travel->target - 1]->current_stat[travel->stat_hit]);

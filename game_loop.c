@@ -206,6 +206,11 @@ void game_loop(player_t **ptr_s)
             printf("%f\n", ptr_s[i]->time);
         }
         printf("\nAttacking player : P%d %s\n\n", ptr_s[saved_id]->id, ptr_s[saved_id]->name);
+        printf("Any pre-effects (before calculation of damages) ? (yes: 0; no: 1; help: 2): ");
+        if (atoi(get_a_line()) == 0) {
+            effect = effect_manager(&effect, ptr_s);
+            effect_executioner(effect, ptr_s);
+        }
         ptr_function[ptr_s[saved_id]->type](ptr_s, saved_id);
         effect = effect_manager(&effect, ptr_s);
         effect_executioner(effect, ptr_s);
